@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(1);
+        displayForTeamA(0);
     }
     public void scoreThree(View view){
         score=score+3;
@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void scoreFreeThrow(View view){
         score=score+1;
+        display(score);
+    }
+    public void resetMatch(View view){
+        score=0;
         display(score);
     }
     public void display (int number){
